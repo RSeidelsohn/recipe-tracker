@@ -1,0 +1,90 @@
+// New color scheme:
+$colors: (
+    'blue': (
+        blue-10: #e5f4ff,
+        blue-20: #cfeaff,
+        blue-30: #abdbff,
+        blue-40: #78c4ff,
+        blue-50: #36a4f7,
+        blue-60: #0976d6,
+        blue-70: #045eb8,
+        blue-80: #003e7d,
+        blue-90: #002e5c,
+        blue-100: #001c36,
+    ),
+    'grey': (
+        grey-10: #f0f3f7,
+        grey-20: #e4e7ed,
+        grey-30: #d0d5db,
+        grey-40: #b4bac2,
+        grey-50: #8f949c,
+        grey-60: #6e7278,
+        grey-70: #5a5d61,
+        grey-80: #3d3e40,
+        grey-90: #2d2e30,
+        grey-100: #1c1d1f,
+    ),
+    'teal': (
+        teal-10: #dff7f3,
+        teal-20: #b8f2ea,
+        teal-30: #7ae9dc,
+        teal-40: #2ad1c9,
+        teal-50: #12b0ab,
+        teal-60: #0e8187,
+        teal-70: #0f6670,
+        teal-80: #0d444c,
+        teal-90: #0c333b,
+        teal-100: #0a2026,
+    ),
+    'coral': (
+        coral-10: #ffeded,
+        coral-20: #ffdede,
+        coral-30: #ffc5c2,
+        coral-40: #ffa099,
+        coral-50: #fa6e5f,
+        coral-60: #cc3e2b,
+        coral-70: #a33322,
+        coral-80: #6e2218,
+        coral-90: #521a14,
+        coral-100: #33100d,
+    ),
+    'gold': (
+        gold-10: #fff0d6,
+        gold-20: #ffe0a6,
+        gold-30: #facd70,
+        gold-40: #e8af2a,
+        gold-50: #c48908,
+        gold-60: #a16600,
+        gold-70: #854e03,
+        gold-80: #573509,
+        gold-90: #42280c,
+        gold-100: #26180a,
+    ),
+    'green': (
+        green-10: #e9f5e9,
+        green-20: #cfedcc,
+        green-30: #ace5a1,
+        green-40: #6cd162,
+        green-50: #3ba83b,
+        green-60: #2c8242,
+        green-70: #26693b,
+        green-80: #1f4a2f,
+        green-90: #183324,
+        green-100: #122118,
+    ),
+);
+
+@function color($colorShade, $amount) {
+    @if not(map-has-key($colors, $colorShade)) {
+        @error 'The color #{$colorShade} is not allowed, please try using one of the allowed values: #{map-keys($colors)}';
+    }
+
+    $colorSet: map-get($colors, '#{$colorShade}');
+
+    @return map-get($colorSet, '#{$colorShade}-#{$amount}');
+}
+
+// General
+$color-black: #000000;
+$color-white: #ffffff;
+$color-text: color('grey', 80);

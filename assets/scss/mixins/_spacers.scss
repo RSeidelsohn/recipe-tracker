@@ -1,0 +1,7 @@
+@function get-spacer($size) {
+    @if not(map-has-key($spacers, $size)) {
+        @error 'Size #{$size} is not allowed. Try using one of #{map-keys($spacers)}';
+    }
+
+    @return #{map-get($spacers, $size)}px;
+}

@@ -1,0 +1,7 @@
+// Use for all font size attributes, in order to only apply "rem" units in the compiled CSS.
+// Taken from Stubbornella (http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/):;
+@function calculate-rem($size) {
+    $rem-size: $size / 16px;
+
+    @return #{$rem-size}rem;
+}

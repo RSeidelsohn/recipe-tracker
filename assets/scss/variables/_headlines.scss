@@ -1,0 +1,32 @@
+$headlines: (
+    xxl: (
+        weight: $font-weight-semibold,
+        size: 96px,
+        lineHeight: 1
+    ),
+    xl: (
+        weight: $font-weight-semibold,
+        size: 64px,
+        lineHeight: 1.125
+    ),
+    l: (
+        weight: $font-weight-semibold,
+        size: 48px,
+        lineHeight: 1.25
+    ),
+    m: (
+        weight: $font-weight-semibold,
+        size: 32px,
+        lineHeight: 1.375
+    ),
+    s: (
+        weight: $font-weight-semibold,
+        size: 24px,
+        lineHeight: 1.333
+    ),
+    xs: (
+        weight: $font-weight-semibold,
+        size: 20px,
+        lineHeight: 1.4
+    )
+);

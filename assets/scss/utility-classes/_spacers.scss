@@ -1,0 +1,74 @@
+$sizes: map-keys($spacers);
+
+@each $size in $sizes {
+    // Margin
+    .mar-#{$size} {
+        margin: get-spacer($size) !important;
+    }
+
+    .mar-v-#{$size} {
+        margin-top: get-spacer($size) !important;
+        margin-bottom: get-spacer($size) !important;
+    }
+
+    .mar-h-#{$size} {
+        margin-left: get-spacer($size) !important;
+        margin-right: get-spacer($size) !important;
+    }
+
+    .mar-top-#{$size} {
+        margin-top: get-spacer($size) !important;
+    }
+
+    .mar-right-#{$size} {
+        margin-right: get-spacer($size) !important;
+    }
+
+    .mar-bottom-#{$size} {
+        margin-bottom: get-spacer($size) !important;
+    }
+
+    .mar-left-#{$size} {
+        margin-left: get-spacer($size) !important;
+    }
+
+    // Padding
+    .pad-#{$size} {
+        padding: get-spacer($size) !important;
+    }
+
+    .pad-v-#{$size} {
+        padding-top: get-spacer($size) !important;
+        padding-bottom: get-spacer($size) !important;
+    }
+
+    .pad-h-#{$size} {
+        padding-left: get-spacer($size) !important;
+        padding-right: get-spacer($size) !important;
+    }
+
+    .pad-top-#{$size} {
+        padding-top: get-spacer($size) !important;
+    }
+
+    .pad-right-#{$size} {
+        padding-right: get-spacer($size) !important;
+    }
+
+    .pad-bottom-#{$size} {
+        padding-bottom: get-spacer($size) !important;
+    }
+
+    .pad-left-#{$size} {
+        padding-left: get-spacer($size) !important;
+    }
+}
+
+// Clearing spacers
+.mar-none {
+    margin: 0 !important;
+}
+
+.pad-none {
+    padding: 0 !important;
+}

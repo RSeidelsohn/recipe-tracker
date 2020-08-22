@@ -1,0 +1,16 @@
+@mixin headline($size) {
+    @if not(map-has-key($headlines, $size)) {
+        @error 'Size #{size} is not allowed. Try using one of #{map-keys($headlines)}';
+    }
+    margin: 0;
+    // Get font style for the specific size
+    $headline-styles: map-get($headlines, $size);
+    // Get values
+    $fonts-size: map-get($headline-styles, 'size');
+    $font-weight: map-get($headline-styles, 'weight');
+    $line-height: map-get($headline-styles, 'lineHeight');
+    // Apply values
+    font-size: calculate-rem($fonts-size);
+    font-weight: $font-weight;
+    line-height: $line-height;
+}

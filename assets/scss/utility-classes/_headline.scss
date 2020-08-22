@@ -1,0 +1,7 @@
+$sizes: map-keys($headlines);
+
+@each $size in $sizes {
+    .headline-#{$size} {
+        @include headline($size);
+    }
+}

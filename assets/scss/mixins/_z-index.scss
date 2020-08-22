@@ -1,0 +1,10 @@
+@function z($element) {
+    $z-index: index($z-index-elements-list, $element);
+
+    @if $z-index {
+        @return $z-index - 2;
+    }
+
+    @warn 'There is no item \'#{$element}\' in the z-index-elements list. Choose one of: #{$z-index-elements-list}';
+    @return null;
+}
